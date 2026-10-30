@@ -1,0 +1,27 @@
+TOMATO — ANIMES & MANGÁS
+
+PRONTO NESTE PACOTE
+- Interface responsiva e identidade visual TOMATO.
+- Catálogo demonstrativo, filtros, busca e favoritos locais.
+- PWA: manifesto, ícones e service worker.
+- Workflow incluído para publicação automática no GitHub Pages após conectar um repositório.
+
+PUBLICAÇÃO
+1. É necessário ter uma conta GitHub (se você for menor de idade, faça isso com a orientação de um responsável).
+2. Crie um repositório chamado tomato-site.
+3. Envie o conteúdo desta pasta para a raiz do repositório, incluindo a pasta oculta .github.
+4. Em Settings > Pages, escolha GitHub Actions como origem, se ainda não estiver selecionado.
+5. O workflow publicará o site após o envio. O endereço aparecerá na seção Pages do repositório.
+6. O endereço público usa HTTPS; então a instalação PWA poderá ser oferecida por navegadores compatíveis.
+
+CONTEÚDO REAL — IMPORTANTE
+O catálogo incluído é demonstrativo. Uma API de catálogo (metadados, capas, sinopses) não fornece direitos para transmitir episódios ou reproduzir capítulos. A API pública do AniList, por exemplo, é uma base de dados de anime/mangá, não um serviço de streaming, e os termos restringem seu uso em serviços concorrentes de catálogo. Por isso ela não foi conectada como se fosse uma fonte de vídeos ou capítulos.
+
+Para ativar reprodução real, o TOMATO precisa de contrato/API/documentação de um distribuidor ou editora que autorize expressamente a exibição no seu site, com URLs oficiais e regras de região/autenticação. Nenhuma fonte não verificada foi embutida.
+
+O QUE AINDA PRECISA DE AÇÃO EXTERNA
+- Conectar o GitHub e autorizar a criação/publicação do repositório.
+- Obter uma fonte licenciada para vídeos e capítulos.
+- Opcionalmente registrar domínio próprio.
+
+Este pacote não está publicado ainda e não contém episódios ou capítulos protegidos.

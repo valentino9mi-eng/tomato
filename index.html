@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101014">
+  <meta name="description" content="TOMATO — sua central de animes e mangás.">
+  <title>TOMATO — Animes & Mangás</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="TOMATO início"><img src="assets/tomato-logo.jpg" alt="TOMATO — Animes e Mangás"></a>
+    <nav class="desktop-nav">
+      <button class="nav-link active" data-view="home">Início</button>
+      <button class="nav-link" data-view="anime">Animes</button>
+      <button class="nav-link" data-view="manga">Mangás</button>
+      <button class="nav-link" data-view="favorites">Minha lista</button>
+    </nav>
+    <div class="top-actions">
+      <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar títulos..." aria-label="Buscar títulos"></label>
+      <button id="installBtn" class="install-btn" hidden>Instalar app</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">SEU PRÓXIMO UNIVERSO COMEÇA AQUI</p>
+        <h1>Histórias que<br><em>não têm limites.</em></h1>
+        <p class="hero-text">Descubra novos mundos, acompanhe episódios e mergulhe em grandes histórias.</p>
+        <div class="hero-buttons">
+          <button class="primary-btn" id="exploreBtn">Explorar catálogo <span>→</span></button>
+          <button class="secondary-btn" data-view="manga">Ler mangás</button>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="hero-kanji">物語</div>
+        <div class="hero-stamp">T<br>O<br>M<br>A<br>T<br>O</div>
+      </div>
+      <div class="hero-bottom"><span>ANIME • MANGÁ • CULTURA</span><span>01 / 02</span></div>
+    </section>
+
+    <section class="content-section" id="contentSection">
+      <div class="section-heading">
+        <div><p class="eyebrow" id="sectionEyebrow">ESCOLHIDOS PARA VOCÊ</p><h2 id="sectionTitle">Em destaque</h2></div>
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all">Todos</button>
+          <button class="filter" data-filter="action">Ação</button>
+          <button class="filter" data-filter="fantasy">Fantasia</button>
+          <button class="filter" data-filter="adventure">Aventura</button>
+        </div>
+      </div>
+      <div class="catalog-grid" id="catalogGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>Nenhum título encontrado. Tente outra busca.</p>
+    </section>
+
+    <section class="continue-section">
+      <div><p class="eyebrow">SEMPRE TEM MAIS UMA PÁGINA</p><h2>Continue de onde parou.</h2><p>Seus favoritos e seu histórico ficam neste dispositivo.</p></div>
+      <button class="outline-btn" data-view="favorites">Ver minha lista ↗</button>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><img src="assets/tomato-logo.jpg" alt="TOMATO"></a><span>Um universo de histórias, em um só lugar.</span><span>© <span id="year"></span> TOMATO</span></footer>
+
+  <div class="modal-backdrop" id="modal" hidden>
+    <section class="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close-modal" id="closeModal" aria-label="Fechar">×</button>
+      <div class="modal-cover" id="modalCover"></div>
+      <div class="modal-info">
+        <p class="eyebrow" id="modalType">ANIME</p><h2 id="modalTitle"></h2>
+        <p class="modal-meta" id="modalMeta"></p><p id="modalDescription"></p>
+        <div class="modal-actions"><button class="primary-btn" id="mainAction">Abrir título →</button><button class="secondary-btn" id="favoriteBtn">＋ Minha lista</button></div>
+        <div id="episodes" class="episodes"></div>
+      </div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
